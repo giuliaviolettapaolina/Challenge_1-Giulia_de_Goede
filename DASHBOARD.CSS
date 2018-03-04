@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+html, body{
+
+	transform: translate3d(0,0,0);
+    position: relative;
+    height: 100%;
+}
+
+
+
+.one div, .sun{
+	background: white;
+	border-radius: 50%;
+	display: inline-flex;
+	margin: 0 20px;
+	
+	box-shadow: 0px 0px 0px 0px rgba(255,255,255,0);
+	
+	-webkit-transition: all 600ms ease-out; 
+	
+	cursor: pointer;
+	
+}
+
+.one div:hover, .sun:hover{
+    background-color: #ED6A53;
+	box-shadow: 0px 0px 0px 2px rgba(237,106,83,.8);
+	
+	-webkit-transition: all 200ms ease-out; 
+	
+}
+
+.upandatthem{
+		-webkit-animation: goround 5s ease-in-out;
+}
+
+.one div:nth-of-type(2){
+	-webkit-animation-delay: .1s;
+}
+.one div:nth-of-type(3){
+	-webkit-animation-delay: .2s;
+}
+.one div:nth-of-type(4){
+	-webkit-animation-delay: .3s;
+}
+.one div:nth-of-type(5){
+	-webkit-animation-delay: .4s;
+}
+.one div:nth-of-type(6){
+	-webkit-animation-delay: .5s;
+}
+.one div:nth-of-type(7){
+	-webkit-animation-delay: .6s;
+}
+.one div:nth-of-type(8){
+	-webkit-animation-delay: .7s;
+}
+.one div:nth-of-type(9){
+	-webkit-animation-delay: .8s;
+}
+
+@-webkit-keyframes goround {
+  0%   { 
+  transform: rotate(0deg); 
+  }
+  100% { 
+  transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* CIRCLES */
+
+.wheel {
+  position: relative;
+  height: 120px;
+  width: 120px;
+}
+
+.wrapper .overlay {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  display: table;
+  background-color: black;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 12px;
+  text-align: center;
+  z-index: 20;
+}
+.wrapper .overlay .value-container {
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.wrapper .overlay .value {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  line-height: 1em;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.wrapper {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  float: right;
+  background: white;
+}
+.wrapper .circle-wrapper {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  clip: rect(0px, 120px, 120px, 60px);
+  /* Hide half of the progress bar */
+}
+
+/* Set the sizes of the elements that make up the progress bar */
+.circle {
+  width: 96px;
+  height: 96px;
+  border: 12px solid #20D7D9;
+  border-radius: 50%;
+  position: absolute;
+  clip: rect(0px, 60px, 120px, 0px);
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+/**
+ * Using the data attributes for the animation selectors.
+ * Base settings for all animated elements
+ */
+[data-anim~=base] {
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /* Only run once */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* Hold the last keyframe */
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  /* Linear animation */
+}
+
+[data-anim~=wrapper] {
+  -webkit-animation-duration: 0.01s;
+          animation-duration: 0.01s;
+  /* Complete keyframes asap */
+  -webkit-animation-name: close-wrapper;
+          animation-name: close-wrapper;
+  /* Keyframes name */
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+/* 0deg */
+@-webkit-keyframes deg0 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes deg0 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/* 90deg */
+@-webkit-keyframes deg90 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@keyframes deg90 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+/* 180deg */
+@-webkit-keyframes deg180 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes deg180 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+/* 270deg */
+@-webkit-keyframes deg270 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+@keyframes deg270 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+/* 360deg */
+@-webkit-keyframes deg360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes deg360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.value {
+  /* 0deg  */
+  /* 90deg */
+  /* 180deg */
+  /* 270deg */
+  /* 360deg */
+}
+.value0 [data-anim~=wrapper] {
+  -webkit-animation: none;
+          animation: none;
+}
+.value0 .circle[data-anim~=left] {
+  -webkit-animation-name: deg0;
+          animation-name: deg0;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value0 .circle[data-anim~=right] {
+  -webkit-animation-name: deg0;
+          animation-name: deg0;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value1 [data-anim~=wrapper] {
+  -webkit-animation: none;
+          animation: none;
+}
+.value1 .circle[data-anim~=left] {
+  -webkit-animation-name: deg90;
+          animation-name: deg90;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value1 .circle[data-anim~=right] {
+  -webkit-animation-name: deg90;
+          animation-name: deg90;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value2 [data-anim~=wrapper] {
+  -webkit-animation: none;
+          animation: none;
+}
+.value2 .circle[data-anim~=left] {
+  -webkit-animation-name: deg180;
+          animation-name: deg180;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value2 .circle[data-anim~=right] {
+  -webkit-animation-name: deg180;
+          animation-name: deg180;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value3 [data-anim~=wrapper] {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.value3 .circle[data-anim~=left] {
+  -webkit-animation-name: deg180;
+          animation-name: deg180;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.value3 .circle[data-anim~=right] {
+  -webkit-animation-name: deg270;
+          animation-name: deg270;
+  -webkit-animation-duration: 2.25s;
+          animation-duration: 2.25s;
+}
+
+
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(0px, 120px, 120px, 0);
+  }
+}
+
+@keyframes close-wrapper {
+  to {
+    clip: rect(0px, 120px, 120px, 0);
+  }
+}
+
+
+/* POLAR */
+
+canvas {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
